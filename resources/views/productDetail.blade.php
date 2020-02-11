@@ -86,28 +86,28 @@
                 <div class="fw-size-choose">
                         <p>Size</p>
                         <div class="sc-item">
-                            <input type="radio" name="sc" id="size">
-                            <label for="xs-size">X</label>
+                            <input type="radio" name="sc" id="XS">
+                            <label for="xs-size">XS</label>
                         </div>
                         <div class="sc-item">
-                            <input type="radio" name="sc" id="s-size">
+                            <input type="radio" name="sc" id="S">
                             <label for="s-size">S</label>
                         </div>
                         <div class="sc-item">
-                            <input type="radio" name="sc" id="m-size" checked="">
+                            <input type="radio" name="sc" id="M">
                             <label for="m-size" style="text-align: center">M</label>
                         </div>
                         <div class="sc-item">
-                            <input type="radio" name="sc" id="l-size">
+                            <input type="radio" name="sc" id="L">
                             <label for="l-size">L</label>
                         </div>
-                        <div class="sc-item disable">
-                            <input type="radio" name="sc" id="xl-size" disabled>
+                        <div class="sc-item">
+                            <input type="radio" name="sc" id="XL" >
                             <label for="xl-size">XL</label>
                         </div>
                         <div class="sc-item">
-                            <input type="radio" name="sc" id="xxl-size">
-                            <label for="xxl-size">2XL</label>
+                            <input type="radio" name="sc" id="XXL">
+                            <label for="xxl-size">XXL</label>
                         </div>
                     </div>
                 @endif
@@ -178,72 +178,25 @@
             <h2>RELATED PRODUCTS</h2>
         </div>
         <div class="product-slider owl-carousel">
+            @foreach($productRelateds as $productRelated)
             <div class="product-item">
                 <div class="pi-pic">
-                    <img src="img/product/1.jpg" alt="">
+                    <a href="{{url('products',$productRelated->id)}}">
+                        <img src="{{asset('uploads/employee/'. $productRelated->image)}}" alt="">
+
+                    </a>
                     <div class="pi-links">
                         <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                         <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                     </div>
                 </div>
                 <div class="pi-text">
-                    <h6>$35,00</h6>
-                    <p>Flamboyant Pink Top </p>
+                    <h6>Ksh: {{$productRelated->price}}</h6>
+                    <p>{{$productRelated->desc}} </p>
                 </div>
             </div>
-            <div class="product-item">
-                <div class="pi-pic">
-                    <div class="tag-new">New</div>
-                    <img src="img/product/2.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                        <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                    </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35,00</h6>
-                    <p>Black and White Stripes Dress</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="pi-pic">
-                    <img src="img/product/3.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                        <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                    </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35,00</h6>
-                    <p>Flamboyant Pink Top </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="pi-pic">
-                    <img src="img/product/4.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                        <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                    </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35,00</h6>
-                    <p>Flamboyant Pink Top </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="pi-pic">
-                    <img src="img/product/6.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                        <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                    </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35,00</h6>
-                    <p>Flamboyant Pink Top </p>
-                </div>
-            </div>
+                @endforeach
+
         </div>
     </div>
 </section>
@@ -251,9 +204,49 @@
     $(document).ready(function () {
         var $getSize = $('#getSize').val();
 
-        if ($getSize == 44){
-
-            $('#size44').attr("checked","checked");
+        switch ($getSize){
+            case "37":
+                $('#size37').attr("checked","checked");
+                break;
+            case "38":
+                $('#size38').attr("checked","checked");
+                break;
+            case "39":
+                $('#size39').attr("checked","checked");
+                break;
+            case "40":
+                $('#size40').attr("checked","checked");
+                break;
+            case "41":
+                $('#size41').attr("checked","checked");
+                break;
+            case "42":
+                $('#size42').attr("checked","checked");
+                break;
+            case "43":
+                $('#size43').attr("checked","checked");
+                break;
+            case "44":
+                $('#size44').attr("checked","checked");
+                break;
+            case "XS":
+                $('#XS').attr("checked","checked");
+                break;
+            case "S":
+                $('#S').attr("checked","checked");
+                break;
+            case "M":
+                $('#M').attr("checked","checked");
+                break;
+            case "L":
+                $('#L').attr("checked","checked");
+                break;
+            case "XL":
+                $('#XL').attr("checked","checked");
+                break;
+            case "XXL":
+                $('#XXL').attr("checked","checked");
+                break;
         }
 
     });

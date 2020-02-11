@@ -25,7 +25,7 @@
 
                             <select class="mdb-select md form" name="product_type">
                                 <option value="1">Tops</option>
-                                <option value="2">Jackets</option>
+                                <option value="4">Jackets</option>
                                 <option value="3">Shoes</option>
                                 <option value="4">Jampers</option>
 

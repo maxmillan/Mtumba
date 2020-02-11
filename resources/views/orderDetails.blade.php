@@ -15,7 +15,7 @@
                             <div class="btn-group">
                                 <button type="button" class="btn btn-success btn-filter" data-target="pagado">Completed</button>
                                 <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pending</button>
-                                <button type="button" class="btn btn-danger btn-filter" data-target="cancelado"><Cancel></Cancel>led</button>
+                                <button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelled</button>
                                 <button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
                             </div>
                         </div>

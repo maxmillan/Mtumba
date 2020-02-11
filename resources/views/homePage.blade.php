@@ -97,14 +97,15 @@
             <h2>BROWSE TOP SELLING PRODUCTS</h2>
         </div>
         <ul class="product-filter-menu">
-            <li><a href="#">TOPS</a></li>
-            <li><a href="#">JUMPSUITS</a></li>
-            <li><a href="#">LINGERIE</a></li>
+            <li><a href="#">JACKETS</a></li>
+            <li><a href="#">T-SHIRTS</a></li>
+            <li><a href="#">SHOES</a></li>
             <li><a href="#">JEANS</a></li>
-            <li><a href="#">DRESSES</a></li>
             <li><a href="#">COATS</a></li>
-            <li><a href="#">JUMPERS</a></li>
-            <li><a href="#">LEGGINGS</a></li>
+            <li><a href="#">SLIPPERS</a></li>
+            <li><a href="#">CAPS</a></li>
+            <li><a href="#">SWEAT PANTS</a></li>
+
         </ul>
         <div class="row">
             @foreach($pics as $pic)

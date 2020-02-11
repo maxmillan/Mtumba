@@ -12,9 +12,11 @@ class productDetailController extends Controller
     public function index($id){
             $desc = FrontPagePicture::find($id);
             $productSizes = FrontPagePicture::all();
+            $productRelateds = FrontPagePicture::where('product_id',$desc->product_id)->get();
             return view('productDetail',[
                 'desc'=>$desc,
-                'productSizes'=>$productSizes
+                'productSizes'=>$productSizes,
+                'productRelateds'=>$productRelateds
             ]);
 
 
